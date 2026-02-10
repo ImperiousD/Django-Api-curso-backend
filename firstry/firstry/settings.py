@@ -151,7 +151,7 @@ STATICFILES_DIRS = [
 ]
 
 # creamos un nuevo directorio llamado staticfiles para almacenar los archivos estáticos recopilados por collectstatic. Esto es necesario para que WhiteNoise pueda servir los archivos estáticos en producción. Asegúrate de ejecutar python manage.py collectstatic antes de desplegar tu aplicación para recopilar todos los archivos estáticos en el directorio staticfiles.
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Production security settings
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
