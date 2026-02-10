@@ -1,1 +1,1 @@
-web: python manage.py collectstatic gunicorn --chdir firstry firstry.wsgi:application
+web: python manage.py collectstatic --noinput && gunicorn --chdir firstry firstry.wsgi:application
