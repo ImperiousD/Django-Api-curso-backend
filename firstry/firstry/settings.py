@@ -87,6 +87,7 @@ WSGI_APPLICATION = 'firstry.wsgi.application'
 import os
 import dj_database_url
 
+# Configuración de la base de datos utilizando la librería dj_database_url para manejar la URL de la base de datos proporcionada por Railway. Si no se encuentra la variable de entorno DATABASE_URL, se utiliza una base de datos SQLite local para desarrollo.
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
     DATABASES = {
@@ -142,10 +143,6 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
